@@ -2,8 +2,8 @@
 
 
 void calcula_quadrado(int lado, float *area, float *perimetro){
-	*area= lado+lado+lado+lado;
-	*perimetro = *area;
+	*area= lado*lado;
+	*perimetro = lado*4;
 
 }
 
