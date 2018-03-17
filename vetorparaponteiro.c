@@ -12,7 +12,7 @@ printf("Digite 5 numeros\n");
 		scanf("%d", &vet[i]);
 		}
 	for(i=0; i<5; i++){
-		printf("%d\n", *(p)++);
+		printf("\n%d\n", *(p)++);
 		}
 	
 return 0;}
