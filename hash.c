@@ -13,11 +13,11 @@ typedef struct nodo{
 }nodo;
 
 
-int resto(int num){ //funÁ„o que calcula em qual posiÁ„o o novo elemento sera inserido
+int resto(int num){ //fun√ß√£o que calcula em qual posi√ß√£o o novo elemento sera inserido
 	return (num % MAX);
 }
 
-int buscar(int num, nodo *hash_table[]){ //funÁ„o que busca se o elemento esta na tabela
+int buscar(int num, nodo *hash_table[]){ //fun√ß√£o que busca se o elemento esta na tabela
 	int h = resto(num);
 	nodo *bus = hash_table[h];
 	
@@ -28,7 +28,7 @@ int buscar(int num, nodo *hash_table[]){ //funÁ„o que busca se o elemento esta n
 	 bus = bus->next;  
 	}
 
-	return -1; //se n„o achou nenhum eleemento correspondente
+	return -1; //se n√£o achou nenhum eleemento correspondente
 	
 }
 
@@ -37,9 +37,9 @@ void inserir(info no, nodo *hash_table[]){
   nodo *novo;
   int num = no.valor;
   int h;
-  //precisamos verificar se o numero que esta sendo inserido ja consta na tabela chamando a funÁ„o busca
+  //precisamos verificar se o numero que esta sendo inserido ja consta na tabela chamando a fun√ß√£o busca
   if(buscar(num, hash_table) != -1){
-   		printf("J· existe esse numero na tabela\n");
+   		printf("J√° existe esse numero na tabela\n");
 		return;	
 	}
   h = resto(num);
@@ -96,22 +96,22 @@ int main(){
 	
 	do{
 		printf("(1) Inserir um elemento na tabela\n");
-    	printf("(2) Procurar um elemento\n");
-    	printf("(3) Mostrar a tabela hash\n");
+    		printf("(2) Procurar um elemento\n");
+    		printf("(3) Mostrar a tabela hash\n");
 	
 		scanf("%d", &op);
 		switch(op){
 	
 			case 1:
 				scanf("%d", &no.valor);
-        		inserir(no, hash_table);
-    		break;
+        			inserir(no, hash_table);
+    			break;
           
 			case 2:
 				scanf("%d", &num);
-        		i = buscar(num, hash_table);
-        		printarlinha(i, hash_table); 
-    		break;
+        			i = buscar(num, hash_table);
+        			printarlinha(i, hash_table); 
+    			break;
 		
 			case 3:
 				printar(hash_table);
